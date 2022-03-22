@@ -3,11 +3,11 @@ const router = express.Router();
 const mongoose = require('mongoose');
 
 // require the schema that is defined for todos
-const todoSchema = require('../schema/todoSchema');
+const Todo = require('../schema/todoSchema');
 
 // create a model of todos
 // keep the model name singular
-const Todo = new mongoose.model("Todo", todoSchema);
+// const Todo = new mongoose.model("Todo", todoSchema);
 
 
 
@@ -110,8 +110,6 @@ router.put('/:id', async (req, res) => {
             }
         }
         );
-        console.log(data);
-
     } catch {
 
     }
